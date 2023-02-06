@@ -366,6 +366,7 @@ export default {
         AuthServices.fetchEntityInfo(this.businessId),
         LegalServices.fetchBusinessInfo(this.businessId),
         LegalServices.fetchTasks(this.businessId),
+        // TODO - remove, moved to the FilingHistoryModule
         LegalServices.fetchFilings(this.businessId || this.tempRegNumber),
         LegalServices.fetchParties(this.businessId)
       ])
@@ -375,6 +376,7 @@ export default {
       this.storeEntityInfo(data[0])
       await this.storeBusinessInfo(data[1])
       this.storeTasks(data[2])
+      // TODO - remove, moved to the FilingHistoryModule
       this.storeFilings(data[3])
       this.storeParties(data[4])
     },
@@ -687,6 +689,7 @@ export default {
       }
     },
 
+    // TODO - remove, moved to the FilingHistoryModule
     storeFilings (response: any): void {
       const filings = response?.data?.filings as ApiFilingIF[]
       if (filings) {

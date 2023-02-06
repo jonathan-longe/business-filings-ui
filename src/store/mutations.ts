@@ -84,6 +84,7 @@ export default {
   tasks (state: StateIF, tasks: Array<ApiTaskIF>) {
     state.tasks = tasks
   },
+  // TODO - remove the following
   filings (state: StateIF, filings: Array<ApiFilingIF>) {
     state.filings = filings
   },

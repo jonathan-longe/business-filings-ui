@@ -83,6 +83,7 @@ export default {
   setTasks ({ commit }, tasks: Array<ApiTaskIF>) {
     commit('tasks', tasks)
   },
+  // TODO - remove the following
   setFilings ({ commit }, filings: Array<ApiFilingIF>) {
     commit('filings', filings)
   },

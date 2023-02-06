@@ -4,6 +4,7 @@ import actions from './actions'
 import getters from './getters'
 import mutations from './mutations'
 import { state } from './state'
+import filingHistoryModule from "@/store/FilingHistoryModule";
 
 /**
  * Configures and returns Vuex Store.
@@ -15,7 +16,10 @@ export function getVuexStore () {
     actions,
     getters,
     mutations,
-    state
+    state,
+    modules: {
+      filingHistoryModule: filingHistoryModule
+    }
   })
 
   return store
